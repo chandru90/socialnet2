@@ -34,7 +34,7 @@ const Post = ({ post }) => {
     try {
       const action = liked ? "dislike" : "like";
       const res = await axios.get(
-        `http://localhost:3000/api/v1/post/${post._id}/${action}`,
+        `https://socialnet-e9oe.onrender.com/api/v1/post/${post._id}/${action}`,
         { withCredentials: true }
       );
       console.log(res.data);

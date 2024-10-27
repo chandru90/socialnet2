@@ -10,7 +10,7 @@ const useGetSuggestedUsers = () => {
     const fetchSuggestedUsers = async () => {
       try {
         const res = await axios.get(
-          "http://localhost:3000/api/v1/user/suggested",
+          "https://socialnet-e9oe.onrender.com/api/v1/user/suggested",
           { withCredentials: true }
         );
         if (res.data.success) {

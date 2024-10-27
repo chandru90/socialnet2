@@ -5,7 +5,7 @@ import MessageInput from "./MessageInput";
 import { useSelector } from "react-redux";
 import { useAuth } from "./AuthContext";
 // Initialize socket connection outside of the component
-const socket = io("http://localhost:3000");
+const socket = io("https://socialnet-e9oe.onrender.com");
 
 const Chatter = () => {
   const [friend, setFriend] = useState("");
@@ -19,7 +19,7 @@ const Chatter = () => {
       const fetchUsers = async () => {
         try {
           const response = await axios.get(
-            "http://localhost:3000/api/v1/user/suggested",
+            "https://socialnet-e9oe.onrender.com/api/v1/user/suggested",
             { withCredentials: true }
           );
 

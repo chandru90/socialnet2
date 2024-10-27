@@ -31,9 +31,12 @@ const LeftSidebar = () => {
 
   const logoutHandler = async () => {
     try {
-      const res = await axios.get("http://localhost:3000/api/v1/user/logout", {
-        withCredentials: true,
-      });
+      const res = await axios.get(
+        "https://socialnet-e9oe.onrender.com/api/v1/user/logout",
+        {
+          withCredentials: true,
+        }
+      );
       console.log("logout response", res);
       if (res.data.success) {
         setAuthUser(null);

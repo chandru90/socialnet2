@@ -22,7 +22,7 @@ const Signup = () => {
     try {
       setLoading(true);
       const res = await axios.post(
-        "http://localhost:3000/api/v1/user/register",
+        "https://socialnet-e9oe.onrender.com/api/v1/user/register",
         input,
         {
           headers: { "Content-Type": "application/json" },
